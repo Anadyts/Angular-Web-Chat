@@ -1,0 +1,25 @@
+nav{
+    
+}
+
+nav a{
+    text-decoration: none;
+    margin-left: 1rem ;
+    color: gray;
+    font-weight: bold;
+    transition: all .1s ease;
+}
+
+nav li{
+    list-style: none;
+    
+}
+ul{
+    display: flex;
+}
+
+nav li:active{
+    transform: scale(1.02);
+    color: rgb(69, 112, 255);
+    text-shadow: 2px 2px 10px rgba(40, 38, 158, 0.267);
+}

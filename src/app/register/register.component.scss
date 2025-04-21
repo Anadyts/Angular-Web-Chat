@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.left {
+    flex: 1;
+    background: linear-gradient(135deg, #009688, #26a69a);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+}
+
+.left h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 500px;
+    opacity: 0.9;
+}
+
+.right {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    animation: fadeIn .7s ease;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: #fdfdfd;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-box input:focus {
+    border-color: #26a69a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(38, 166, 154, 0.3);
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+    background-color: #00796b;
+}
+
+.form-box .login-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-box .login-link a {
+    color: #26a69a;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+    flex-direction: column;
+    }
+
+    .left, .right {
+    flex: none;
+    width: 100%;
+    }
+
+    .left {
+    padding: 60px 20px;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }to{
+        opacity: 1;
+    }
+}

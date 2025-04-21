@@ -1,0 +1,129 @@
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #e6ecf0;
+}
+
+.left {
+    flex: 1;
+    background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.left h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.left p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.right {
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #505050;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: slideIn 1.5s ease;
+}
+
+.form-box h2 {
+    margin-bottom: 25px;
+    color: #505050;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.form-box input:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.form-box button:hover {
+    background-color: #303f9f;
+}
+
+.form-box button:active{
+    background-color: #4357db;
+    transform: scale(1.01);
+}
+
+@keyframes slideIn {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+    flex-direction: column;
+    }
+    .left, .right {
+    flex: none;
+    width: 100%;
+    height: auto;
+    }
+    .left {
+    padding: 60px 20px;
+    }
+}
